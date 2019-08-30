@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta charset="ISO-8859-1">
+	<title>Alta Productos</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<h1></h1>
+	<div class="container">
+		<form id="miformulario" action="destino.html" onsubmit="validacion()">
+		  <div class="form-row">
+		    <div class="form-group col-md-6">
+		      <label for="marca">Marca</label>
+		      <input type="text" class="form-control " id="marca" placeholder="marca" class="close"> 
+		    </div>
+		    <div class="form-group col-md-6">
+		      <label for="modelo">Modelo</label>
+		      <input type="text" class="form-control" id="modelo" placeholder="modelo">
+		    </div>
+		  </div>
+		  <div class="form-row">
+			  <div class="form-group col-md-6">
+			    <label for="dd">Cantidad Disco Duro</label>
+			    <input type="text" class="form-control" id="dd" placeholder="disco duro">
+			  </div>
+			  <div class="form-group col-md-6">
+			    <label for="ram">Memoria RAM</label>
+			    <input type="text" class="form-control" id="ram" placeholder="ram">
+			  </div>
+		  </div>
+		    <div class="form-group">
+		      <label for="descripcion">Descripcion</label>
+		      <input type="text" class="form-control" id="descripcion">
+		    </div>
+		    <div class="form-row">
+			    <div class="form-group col-md-4">
+			      <label for="categoria">Categoria</label>
+			      <select id="categoria" class="form-control">
+			        <option selected>Seleccionar</option>
+			        <option>...</option>
+			      </select>
+			    </div>
+			    <div class="form-group col-md-4">
+			      <label for="cantidad">Cantidad</label>
+			      <input type="text" class="form-control" id="cantidad" placeholder="5">
+			    </div>
+			    <div class="form-group col-md-4">
+			      <label for="precio">Precio</label>
+			      <input type="text" class="form-control" id="precio" placeholder="200.00">
+			    </div>
+		  </div>
+		  
+		  <button type="submit" class="btn btn-success">Aceptar</button>
+		  <button type="submit" class="btn btn-secondary">Cancelar</button>
+
+		</form>
+	</div>
+	<script type="text/javascript">
+		function validacion() {
+			var marca = document.getElementById("marca");
+			var miformulario = document.getElementById("miformulario");
+			if(document.forms[0].marca.value==""){
+				alert("Datos vacios");
+				return false;
+			}else{
+				miformulario.submit();
+			}
+		}
+	</script>
+</body>
+</html>
